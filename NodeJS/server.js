@@ -77,7 +77,6 @@ console.log(sum);
 
 
 // CREATING BASIC SERVER
-/*
 const http = require('http');
 const fs = require("fs");
 
@@ -99,10 +98,10 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200;
             break;
         default:
-            res.setHeader("Location", "/");
-            res.statusCode = 301;    
-            //path += "404.html";
-            //res.statusCode = 404;
+            //res.setHeader("Location", "/");
+            //res.statusCode = 301;    
+            path += "404.html";
+            res.statusCode = 404;
             break;
     }
 
@@ -116,20 +115,5 @@ const server = http.createServer((req, res) => {
         }
     });
 });
-
-server.listen(PORT, () => console.log("Server running..."));
-
-*/
-
-const http = require('http')
-
-const PORT = process.env.PORT || 3000
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader("content-type", "text/plain");
-    res.write("Test");
-    res.end()});
-
 
 server.listen(PORT, () => console.log("Server running..."));

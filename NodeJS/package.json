@@ -4,7 +4,7 @@
   "description": "#Testiranje",
   "main": "addNums.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server",
     "start": "node server.js"
   },
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bpirecnik/tutorials/issues"
   },
-  "homepage": "https://github.com/bpirecnik/tutorials#readme"
+  "homepage": "https://github.com/bpirecnik/tutorials#readme",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
